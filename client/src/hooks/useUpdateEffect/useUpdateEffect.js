@@ -1,16 +1,13 @@
-import { useState } from "react";
-import useUpdateEffect from './useUpdateEffect'
+import {useEffect, useRef} from 'react'
 
-export default function UpdateEffectComponent () {
+export default function useUpdateEffect(callback, dependencies) {
+  const firstRenderRef = useRef(true)
 
-  const [count, setCount] = useState(10)
-  useUpdateEffect(() => alert(count), [count])
-
-  return (
-
-    <div>
-      <div>{count}</div>
-      <button onClick={() => setCount(c = c + 1)}>Increment</button>
-    </div>
-  )
+  useEffect(() => {
+    if (firstRenderRef.current) {
+      firstRenderRef.current = false
+      return
+    }
+    return callback()
+  }, dependencies)
 }
