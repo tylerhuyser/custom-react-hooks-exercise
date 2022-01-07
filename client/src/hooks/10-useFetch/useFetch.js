@@ -1,4 +1,4 @@
-import useAsync from "../useAsync/useAsync"
+import useAsync from "../9-useAsync/useAsync"
 
 const DEFAULT_OPTIONS = {
   headers: { "Content-Type": "application/json"},

@@ -14,7 +14,7 @@ export default function FetchComponent() {
    <div>
       <div></div>
       <button onClick={() => setID(currentID => currentID + 1)}> Increment ID </button>
-      <div>Loading: {loading.toString</div>
+     <div>Loading: {loading.toString}</div>
       <div>{JSON.stringify(error, null, 2)}</div>
       <div>{JSON.stringify(value, null, 2)}</div>
    </div>
