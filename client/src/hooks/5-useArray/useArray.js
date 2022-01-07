@@ -27,5 +27,5 @@ export default function useArray(defaultValue) {
     setArray([])
   }
 
-  return { array, set: setArray, push, fulter, update, remove clear}
+  return { array, set: setArray, push, fulter, update, remove, clear}
 }
