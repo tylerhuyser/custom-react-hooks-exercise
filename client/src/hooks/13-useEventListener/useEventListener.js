@@ -12,10 +12,6 @@ export default function useEventListener(
   }, [callback])
 
   useEffect(() => {
-    callbackRef.current = callback
-  }, [callback])
-
-  useEffect(() => {
     if (element == null) return
     const handler = e => callbackRef.current(e)
     element.addEventListener(eventType, handler)
