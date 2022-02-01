@@ -7,7 +7,7 @@ export default function CookieComponent() {
 
   return (
     <>
-      <div>{Value}</div>
+      <div>{value}</div>
       <button onClick={() => update("Sally")}>Change Name to Sally</button>
       <button onClick={remove}>Delete Name</button>
     </>
